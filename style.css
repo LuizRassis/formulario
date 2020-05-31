@@ -1,0 +1,24 @@
+div{
+    margin-left: 100px;
+    }
+p,p1{            
+    color: gray;
+    font-family: cursive;
+    font-size: 20px;
+    margin-bottom: 5px;
+    }
+input{
+    padding: 5px 8px;
+    font-family: cursive;
+    color: black;
+    letter-spacing: .09em;
+    border-radius: 10px;
+    border: none;
+}
+button{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 258px;
+    background: gray;
+    text-transform: uppercase;                        
+    }
