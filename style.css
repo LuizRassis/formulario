@@ -1,4 +1,5 @@
-div{
+li{
+    list-style-type: circle;
     margin-left: 100px;
     }
 p,p1{            
@@ -18,7 +19,7 @@ input{
 button{
     margin-bottom: 5px;
     margin-top: 5px;
-    margin-left: 258px;
+    margin-left: 178px;
     background: gray;
     text-transform: uppercase;                        
     }
