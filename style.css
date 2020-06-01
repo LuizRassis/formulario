@@ -15,11 +15,4 @@ input{
     letter-spacing: .09em;
     border-radius: 10px;
     border: none;
-}
-button{
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin-left: 178px;
-    background: gray;
-    text-transform: uppercase;                        
     }

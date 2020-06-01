@@ -9,49 +9,91 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark"><p style="margin-left: 100px; font-size: 24px">FORMULÁRIO PARA CADASTRO DE CLIENTES</p></nav>
-        <form style="background: lightgray">
+        <form id="formulario" style="background: lightgray" method="post">
             <ol>
                 <li>
                     <label><p1>Nome</p1></label>
-                    <input style="margin-left: 200px" name="nome" placeholder="Digite seu nome" type="text">
+                    <input id="pegarNome" name="pegarNome" style="margin-left: 200px" placeholder="Digite seu nome" type="text">                    
                 </li>
                 <li>
                     <label><p1>E-Mail</p1></label>
-                    <input style="margin-left: 193px" name="email" placeholder="Digite seu email" type="email">
+                    <input id="pegarEmail" style="margin-left: 193px" placeholder="Digite seu email" type="email">
                 </li>
                 <li>
                     <label><p1>Telefone</p1></label>
-                    <input style="margin-left: 169px" name="Telefone" placeholder="Digite o Telefone" type="tel">
+                    <input id="pegarTelefone" style="margin-left: 169px" placeholder="Digite o Telefone" type="tel">
                 </li>
                 <li>
                     <label><p1>C.E.P</p1></label>
-                    <input style="margin-left: 208px" name="cep" placeholder="Digite o CEP" type="text">
+                    <input id="pegarCep" style="margin-left: 208px" placeholder="Digite o CEP" type="text">
                 </li>
                 <li>
                     <label><p1>Logradouro</p1></label>
-                    <input style="margin-left: 148px" name="logradouro" placeholder="Digite o Endereço" type="text">
+                    <input id="pegarLogradouro" style="margin-left: 148px" placeholder="Digite o Endereço" type="text">
                 </li>
                 <li>
-                <label><p1>Número</p1></label>
-                    <input style="margin-left: 180px" name="número" placeholder="Número da residência" type="text">
+                    <label><p1>Número</p1></label>
+                    <input id="pegarNumero" style="margin-left: 180px" placeholder="Número da residência" type="text">
                 </li>
                 <li>
                     <label><p1>Bairro</p1></label>
-                    <input style="margin-left: 194px" name="bairro" placeholder="Nome do Bairro" type="text">
+                    <input id="pegarBairro" style="margin-left: 194px" placeholder="Nome do Bairro" type="text">
                 </li>
                 <li>
                     <label><p1>Cidade</p1></label>
-                    <input style="margin-left: 190px" name="cidade" placeholder="Nome da Cidade" type="text">
+                    <input id="pegarCidade" style="margin-left: 190px" placeholder="Nome da Cidade" type="text">
                 </li>
                 <li>
                     <label><p1>Estado</p1></label>
-                    <input style="margin-left: 188px" name="estado" placeholder="Nome do Estado" type="text">
+                    <input id="pegarEstado" style="margin-left: 188px" placeholder="Nome do Estado" type="text">
                 </li>
                 <div>
-                    <button style="padding: 5px 90px;" type="submit" class="btn btn-secondary">Enviar</button>
+                    <input style="padding: 5px 90px; margin-left: 100px" type="button" value="Enviar" class="btn btn-secondary" onclick="clicar()">
+                    <input style="padding: 5px 90px; margin-left: 10" type="reset" value="Excluir" class="btn btn-secondary" onclick="limpar()">
+                </div>
+                <div id="Cadastro">Cadastro
+
                 </div>
             </ol>
         </form>
-        
+        <script>
+                var res = ""      
+                var cadastroNome = ""
+                var cadastroEmail = ""
+                var cadastroTelefone = ""
+                var cadastroCep = ""
+                var cadastroLogradouro = ""
+                var cadastroNumero = ""
+                var cadastroBairro = ""
+                var cadastroCidade = ""
+                var cadastroEstado = ""
+                function clicar(){       
+                    res = window.document.getElementById('Cadastro')         
+                    cadastroNome = window.document.querySelector('input#pegarNome')
+                    cadastroEmail = window.document.getElementById('pegarEmail')
+                    cadastroTelefone = window.document.getElementById('pegarTelefone')
+                    cadastroCep = window.document.getElementById('pegarCep')
+                    cadastroLogradouro = window.document.getElementById('pegarLogradouro')
+                    cadastroNumero = window.document.getElementById('pegarNumero')
+                    cadastroBairro = window.document.getElementById('pegarBairro')
+                    cadastroCidade = window.document.getElementById('pegarCidade')
+                    cadastroEstado = window.document.getElementById('pegarEstado')
+                    res.innerHTML = `Nome: ${cadastroNome}<br/>E-mail: ${cadastroEmail}<br/>Telefone: ${cadastroTelefone}<br/>
+                                Cep: ${cadastroCep}<br/>Logradouro: ${cadastroLogradouro}<br/>Número: ${cadastroNumero}<br/>
+                                Bairro: ${cadastroBairro}<br/>Cidade: ${cadastroCidade}<br/>Estado: ${cadastroEstado}`
+            }
+            function limpar(){
+                res.innerHTML = ""      
+                cadastroNome = ""
+                cadastroEmail = ""
+                cadastroTelefone = ""
+                cadastroCep = ""
+                cadastroLogradouro = ""
+                cadastroNumero = ""
+                cadastroBairro = ""
+                cadastroCidade = ""
+                cadastroEstado = ""
+            }            
+        </script>
     </body>
 </html>
